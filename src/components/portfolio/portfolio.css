@@ -1,0 +1,48 @@
+.portfolio_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.portfolio_item {
+  background: var(--color-bg-variant);
+  padding: 1.3rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.portfolio_item:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
+}
+.portfolio_imgae {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+.portfolio_item h3 {
+  margin: 1.2rem 0 1.4rem;
+  font-size: 0.9rem;
+}
+.fontBtn {
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem !important;
+}
+.showBtn {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+/*============================Media Quries For Medium Device=============================*/
+@media screen and (max-width: 1024px) {
+  .portfolio_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/*============================Media Quries For Small Device=============================*/
+@media screen and (max-width: 600px) {
+  .portfolio_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

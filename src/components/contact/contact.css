@@ -1,0 +1,85 @@
+.contact_container {
+  /* width: 65% !important; */
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 12%;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.about_contact {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 1.2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.about_contact:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+.contact_icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.about_contact h4 {
+  font-weight: 350;
+}
+.about_contact a {
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  display: inline-block;
+}
+/*=================From Css================*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+input,
+textarea {
+  width: 100% !important;
+  border: 2px solid var(--color-primary-variant);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background: transparent;
+  color: var(--color-white) !important;
+  resize: none;
+}
+.marTop {
+  margin-top: 1rem;
+}
+/*=============Remove AutoFill Background Color============*/
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/*============================Media Quries For Medium Device=============================*/
+@media screen and (max-width: 1024px) {
+  .contact_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: var(--container-width-md) !important;
+  }
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/*============================Media Quries For Small Device=============================*/
+@media screen and (max-width: 600px) {
+  .contact_container {
+    width: var(--container-width-sm) !important;
+  }
+  .contacts {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,113 @@
+header {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 4rem;
+}
+
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/*============CTA=============*/
+.cta {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+/*==================================Header Socials===================*/
+.header_social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  bottom: 3rem;
+  position: absolute;
+  align-items: center;
+}
+
+.header_social::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/*===========Me========*/
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  overflow: hidden;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/*===============Scroll Down================*/
+.scroll-down {
+  position: absolute;
+  transform: rotate(90deg);
+  right: -2rem;
+  bottom: 5rem;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/*===========Media Quries For Medium Devices========*/
+
+/*============================Media Quries For Small Device=============================*/
+@media screen and (max-width: 600px) {
+  .header_social,
+  .scroll-down {
+    display: none;
+  }
+  .wImg {
+    width: 100%;
+  }
+
+  .me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 15rem;
+    height: 17rem;
+    overflow: hidden;
+    position: absolute;
+    left: calc(50% - 7.3rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+  .wImg {
+    width: 82%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+  .wImg {
+    width: 90%;
+  }
+  .me {
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 20rem;
+    height: 30rem;
+    overflow: hidden;
+    position: absolute;
+    left: calc(50% - 10rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+  }
+}
